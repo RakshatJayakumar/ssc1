@@ -1,0 +1,53 @@
+ {% extends 'jobapplication/main.html' %}
+{% block content %}
+<h1>Random Fact:</h1>
+    <p>{{ fact }}</p>
+
+    <h1>Weather:</h1>
+    <form action="{% url 'random_fact' %}" method="GET">
+        <label for="city">Enter City:</label>
+        <input type="text" id="city" name="city" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if weather_data %}
+        <p>Temperature: {{ weather_data.temperature }}</p>
+        <p>Humidity: {{ weather_data.humidity }}</p>
+        <p>Weather: {{ weather_data.weather }}</p>
+    {% else %}
+        <p>No weather data available</p>
+    {% endif %}
+    
+    <h1>Currency Conversion:</h1>
+    <form action="{% url 'random_fact' %}" method="POST">
+        {% csrf_token %}
+        <label for="source_currency">Source Currency:</label>
+        <select id="source_currency" name="source_currency" required>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+            <option value="CAD">CAD</option>
+        </select><br>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" required><br>
+        <label for="target_currency">Target Currency:</label>
+        <select id="target_currency" name="target_currency" required>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+            <option value="CAD">CAD</option>
+        </select><br>
+        <button type="submit">Convert</button>
+    </form>
+    
+    {% if conversion_data %}
+        <p>Converted Amount: {{ conversion_data.converted_amount }}</p>
+        <p>Source Currency: {{ conversion_data.source_currency }}</p>
+        <p>Amount: {{ conversion_data.amount }}</p>
+        <p>Target Currency: {{ conversion_data.target_currency }}</p>
+    {% endif %}
+
+{% endblock content %}
+ 

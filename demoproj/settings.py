@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'i=eohpm76u%^@)vmhv^l3e6z=q$#*pae&=p2ce6n&h3dkk02bt'
+SECRET_KEY = 'u%*2*2cgrvq^w-(h4-rbw-$c(c@is6nntc*aovxns8#g$ijug+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '65cf1951d50a423db70e40a8739fa88b.vfs.cloud9.eu-west-1.amazonaws.com','x22245766-simpledemo1-env.eba-9uzvzpew.ap-south-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['x22245766-simpledemo1-env.eba-9uzvzpew.ap-south-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jobapplication'
 ]
 
 MIDDLEWARE = [
@@ -113,6 +114,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_URL = 'login'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

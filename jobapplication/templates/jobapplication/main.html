@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Job Application Tracker</title>
+        <meta name="description" content="">
+        <meta name="Viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        
+        <style>
+            body{
+                background-color: #FAFAFA;
+                font-family: 'Nunito', sans-serif;
+                padding-top: 50px;
+            }
+            h1,h2,h3,h4,h5,h6{
+                font-family: 'Raleway', sans-serif;
+                text-align:center;
+            }
+            a,p{
+                color: #4b5156;
+            }
+            .container{
+                max-width: 550px;
+                margin: auto;
+                background-color: #fff;
+                -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+                box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            }
+            .header-bar{
+                display: flex;
+                justify-content: space-between;
+                color: #fff;
+                padding: 10px;
+                border-radius: 5px 5px 0 0;
+                background-size: 100% 100%;
+background-position: 0px 0px;
+background-image: linear-gradient(90deg, #43C846FF 0%, #71C4FFFF 100%);
+            }
+            .header-bar a {
+                color: rgb(247, 247, 247);
+                text-decoration: none;
+            }
+            label{
+                font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: inline-block;
+            }
+            .input-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+}
+.form {
+  margin: 0 auto;
+  width: 300px;
+}
+button{
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+ input[type="text"],input[type="password"] {
+        height: 32px;
+        width:80%;
+    }
+button:hover{
+     background-color: #45a049;
+}
+button>a{
+  color: rgb(247, 247, 247);
+                text-decoration: none;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
